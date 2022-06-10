@@ -1,0 +1,2 @@
+1. Add the LivePerson tag to your website - done
+2. Pass engagement attributes (cart value and page title) to the agent with SDE (standard data entity) - done
