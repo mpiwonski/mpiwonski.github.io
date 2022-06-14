@@ -1,2 +1,3 @@
 const apiResponseDiv = document.getElementById("apiResponse");
-apiResponseDiv.innerHTML = `Here will be displayed a reponse from API call.`;
+const html = `Here will be displayed a reponse from API call.`;
+apiResponseDiv.insertAdjacentHTML("afterbegin", html);
