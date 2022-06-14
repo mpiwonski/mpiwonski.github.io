@@ -3,10 +3,13 @@ lpTag.agentSDK.init({});
 const divUserMessage = document.getElementById("userMessage");
 
 const updateCallback = function (data) {
-  const path = data.key;
-  const value = data.newValue;
+  const newLine = data.newValue;
+  console.log(newLine);
 
-  divUserMessage.insertAdjacentHTML("beforeend", value);
+  if (newLine[0].by === "Visitor") {
+    divUserMessage.innerHTML = newLine[0].text;
+    console.log(newLine[0].text);
+  }
 };
 
 const notifyWhenDone = function (err) {
@@ -14,7 +17,7 @@ const notifyWhenDone = function (err) {
   }
 };
 
-const pathToData = "chatTranscript.lines[0]";
+const pathToData = "chatTranscript.lines";
 
 lpTag.agentSDK.bind(pathToData, updateCallback, notifyWhenDone);
 
