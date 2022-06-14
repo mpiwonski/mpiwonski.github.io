@@ -8,7 +8,7 @@ const updateCallback = function (data) {
   console.log(newLine);
 
   if (newLine[0].by === "Visitor") {
-    inputUserMessage.innerHTML = newLine[0].text;
+    inputUserMessage.value = newLine[0].text;
     console.log(newLine[0].text);
   }
 };
