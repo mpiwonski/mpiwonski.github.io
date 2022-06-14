@@ -27,7 +27,7 @@ const apiKey = `e4ce0003`;
 const getResponse = async function () {
   try {
     const movieTitle = userMessage.value;
-    const url = `http://www.omdbapi.com/?apikey=${apiKey}&t=${movieTitle}`;
+    const url = `https://www.omdbapi.com/?apikey=${apiKey}&t=${movieTitle}`;
     const response = await fetch(url);
     const responseJson = await response.json();
 
